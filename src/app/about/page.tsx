@@ -8,12 +8,76 @@ export const metadata: Metadata = {
 };
 
 const boardMembers = [
-  { name: 'John Smith', title: 'President', agency: 'Raleigh Police Department' },
-  { name: 'Sarah Johnson', title: 'Vice President', agency: 'Charlotte-Mecklenburg PD' },
-  { name: 'Michael Davis', title: 'Secretary', agency: 'Durham Police Department' },
-  { name: 'Emily Brown', title: 'Treasurer', agency: 'Greensboro Police Department' },
-  { name: 'Robert Wilson', title: 'Board Member', agency: 'Fayetteville Police Department' },
-  { name: 'Jennifer Martinez', title: 'Board Member', agency: 'Winston-Salem Police Department' },
+  {
+    name: 'Derek Moore',
+    position: 'President',
+    title: 'Major',
+    agency: 'Carteret County Sheriff\'s Office',
+    image: 'https://nchia.org/wp-content/uploads/2021/01/Derek-Moore-Treasurer.jpg',
+  },
+  {
+    name: 'Dan Johnson',
+    position: 'Vice-President',
+    title: 'Lieutenant, Field Operations',
+    agency: 'Fayetteville Police Department',
+    image: 'https://nchia.org/wp-content/uploads/2021/01/Daniel-Johnson-Board-Member.jpg',
+  },
+  {
+    name: 'Nicholas Deming',
+    position: 'Treasurer',
+    title: 'Assistant Special Agent in Charge, Special Investigations Unit',
+    agency: 'NC State Bureau of Investigation',
+    image: 'https://nchia.org/wp-content/uploads/2023/06/NickDenning.jpg',
+  },
+  {
+    name: 'Chad Suggs',
+    position: 'Secretary',
+    title: '(Retired) Captain, Criminal Investigations Division',
+    agency: 'Pitt County Sheriff\'s Office',
+    image: 'https://nchia.org/wp-content/uploads/2021/01/Chad-Suggs-Secretary.jpg',
+  },
+  {
+    name: 'Adam Crozier',
+    position: 'Board Member',
+    title: 'Corporal, Homicide Unit',
+    agency: 'Greensboro Police Department',
+    image: 'https://nchia.org/wp-content/uploads/2021/10/adamc.jpg',
+  },
+  {
+    name: 'Justin Godwin',
+    position: 'Board Member',
+    title: 'Sergeant, Field Operations',
+    agency: 'Wilson Police Department',
+    image: 'https://nchia.org/wp-content/uploads/2021/01/Justin-Godwin-Board-Member-1.jpg',
+  },
+  {
+    name: 'Trish Fore',
+    position: 'Board Member',
+    title: 'Program Director, Medical Examiner Training and Management',
+    agency: 'NC Office of the Chief Medical Examiner',
+    image: 'https://nchia.org/wp-content/uploads/2021/01/Trish-Fore-Board-Member.jpg',
+  },
+  {
+    name: 'Daniel Karratti',
+    position: 'Board Member',
+    title: 'Sergeant, Patrol Division',
+    agency: 'Jacksonville Police Department',
+    image: 'https://nchia.org/wp-content/uploads/2023/01/Daniel-Karratti-photo.jpg',
+  },
+  {
+    name: 'G.J. Maccini',
+    position: 'Board Member',
+    title: 'Special Agent, Cold Case Homicide Unit',
+    agency: 'NCIS Carolinas Field Office',
+    image: 'https://nchia.org/wp-content/uploads/2023/12/Joe-Maccini.jpg',
+  },
+  {
+    name: 'Matt Hefner',
+    position: 'Board Member',
+    title: 'Detective, Homicide Cold Case Unit',
+    agency: 'Charlotte-Mecklenburg Police Department',
+    image: 'https://nchia.org/wp-content/uploads/2024/12/Hefner.png',
+  },
 ];
 
 export default function AboutPage() {
@@ -103,20 +167,24 @@ export default function AboutPage() {
           <p className="text-lg text-[#6B7280] text-center mb-12 max-w-2xl mx-auto">
             Our volunteer board members represent agencies across North Carolina, bringing diverse experience and perspectives to guide our organization.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {boardMembers.map((member, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="w-20 h-20 bg-[#2D3E8C] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
+                <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-[#2D3E8C]/20">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-[#1A1A1A] mb-1">{member.name}</h3>
-                <p className="text-[#2D3E8C] font-medium mb-2">{member.title}</p>
-                <p className="text-[#6B7280] text-sm">{member.agency}</p>
+                <h3 className="text-lg font-semibold text-[#1A1A1A] mb-1">{member.name}</h3>
+                <p className="text-[#2D3E8C] font-bold text-sm mb-1">{member.position}</p>
+                <p className="text-[#6B7280] text-sm mb-1">{member.title}</p>
+                <p className="text-[#6B7280] text-xs">{member.agency}</p>
               </div>
             ))}
           </div>
