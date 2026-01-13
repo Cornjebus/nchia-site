@@ -7,6 +7,24 @@ export const metadata: Metadata = {
   description: 'Learn about the North Carolina Homicide Investigators Association, our mission, history, and board of directors.',
 };
 
+const pastPresidents = [
+  { name: 'Whitt Hunter', agency: 'NC SBI', years: '2023-2024' },
+  { name: 'Russell Strickland', agency: 'NC Justice Academy', years: '2021-2022' },
+  { name: 'Phillip Stevens', agency: 'NC SBI', years: '2019-2020' },
+  { name: 'Jimmy Crayton', agency: 'Wallace PD', years: '2017-2018' },
+  { name: 'Mike Panzarella', agency: 'Carteret County Sheriff', years: '2015-2016' },
+  { name: 'Gerald Childress', agency: 'Mooresville PD', years: '2013-2014' },
+  { name: 'John Wiggins', agency: 'NC Justice Academy', years: '2011-2012' },
+  { name: 'Bill Hamby', agency: 'Iredell County Sheriff', years: '2009-2010' },
+  { name: 'Stanley Watkins', agency: 'Iredell County Sheriff', years: '2007-2008' },
+  { name: 'Don Gale', agency: 'NC SBI', years: '2005-2006' },
+  { name: 'Mac Warner', agency: 'NC SBI', years: '2003-2004' },
+  { name: 'Randal Paterson', agency: 'Robeson County Sheriff', years: '2001-2002' },
+  { name: 'Marie Jernigan', agency: 'NC SBI', years: '1999-2000' },
+  { name: 'Tony Cummings', agency: 'NC SBI', years: '1997-1998' },
+  { name: 'Jay Whitt', agency: 'Greensboro PD', years: '1995-1996' },
+];
+
 const boardMembers = [
   {
     name: 'Derek Moore',
@@ -185,6 +203,33 @@ export default function AboutPage() {
                 <p className="text-[#2D3E8C] font-bold text-sm mb-1">{member.position}</p>
                 <p className="text-[#6B7280] text-sm mb-1">{member.title}</p>
                 <p className="text-[#6B7280] text-xs">{member.agency}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Past Presidents */}
+      <section className="py-16 lg:py-20 bg-[#F5F7FA]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4 text-center">Past Presidents</h2>
+          <p className="text-lg text-[#6B7280] text-center mb-12 max-w-2xl mx-auto">
+            The NCHIA Past Presidents Association was established in November 1994. We honor those who have led our organization.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {pastPresidents.map((president, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition-shadow"
+              >
+                <div className="w-12 h-12 bg-[#2D3E8C] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-semibold text-[#1A1A1A] mb-1">{president.name}</h3>
+                <p className="text-[#2D3E8C] font-medium text-xs mb-1">{president.years}</p>
+                <p className="text-[#6B7280] text-xs">{president.agency}</p>
               </div>
             ))}
           </div>
