@@ -54,9 +54,9 @@ export default function Home() {
       <Hero />
 
       <ConferenceBanner
-        name="Spring Conference 2025"
-        dates="March 15-17, 2025"
-        location="Raleigh Convention Center, Raleigh, NC"
+        name="Spring Conference 2026"
+        dates="April 19-24, 2026"
+        location="Harrah's Cherokee Resort/Casino, Cherokee, NC"
         href="/conferences/spring"
       />
 

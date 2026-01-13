@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 const conferences = [
   {
-    name: 'Spring Conference 2025',
-    dates: 'March 15-17, 2025',
-    location: 'Raleigh Convention Center, Raleigh, NC',
-    description: 'Our flagship spring conference brings together investigators from across the state for three days of intensive training, case presentations, and networking.',
+    name: 'Spring Conference 2026',
+    dates: 'April 19-24, 2026',
+    location: "Harrah's Cherokee Resort/Casino, Cherokee, NC",
+    description: 'Our flagship spring conference brings together investigators from across the state for six days of intensive training, case presentations, and networking at the beautiful Harrah\'s Cherokee Resort.',
     href: '/conferences/spring',
     status: 'Registration Open',
   },
   {
-    name: 'Fall Conference 2025',
-    dates: 'October 8-10, 2025',
-    location: 'Raleigh Convention Center, Raleigh, NC',
+    name: 'Fall Conference 2026',
+    dates: 'October 2026',
+    location: 'TBA',
     description: 'The fall conference focuses on emerging trends in homicide investigation, new forensic technologies, and advanced investigative techniques.',
     href: '/conferences/fall',
     status: 'Coming Soon',
@@ -133,16 +133,16 @@ export default function ConferencesPage() {
                 <h3 className="text-xl font-semibold text-[#1A1A1A] mb-4">Registration Fees</h3>
                 <ul className="space-y-3 text-[#6B7280]">
                   <li className="flex justify-between">
-                    <span>NCHIA Members</span>
-                    <span className="font-semibold text-[#1A1A1A]">$275</span>
+                    <span>Spring Conference 2026</span>
+                    <span className="font-semibold text-[#1A1A1A]">$300</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Non-Members</span>
-                    <span className="font-semibold text-[#1A1A1A]">$325</span>
+                    <span>Location</span>
+                    <span className="font-semibold text-[#1A1A1A]">Harrah&apos;s Cherokee</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Late Registration (after deadline)</span>
-                    <span className="font-semibold text-[#1A1A1A]">+$50</span>
+                    <span>Dates</span>
+                    <span className="font-semibold text-[#1A1A1A]">April 19-24, 2026</span>
                   </li>
                 </ul>
               </div>
